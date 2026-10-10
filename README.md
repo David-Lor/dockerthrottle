@@ -1,2 +1,3 @@
-# generic-template
-My custom template for generic repositories
+# dockerthrottle
+
+throttle docker containers cpu usage, based on the temperature

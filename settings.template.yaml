@@ -1,0 +1,16 @@
+containers:
+  # Names accept fnmatch
+  - folding*
+  - boinc
+
+temperature:
+  limit: 73
+  device: /sys/class/hwmon/hwmon6/temp1_input
+  # Find device with:
+  # for h in /sys/class/hwmon/hwmon*; do echo "$(cat $h/name): $h"; done
+
+cpu_limit:
+  #max-cores: 12  # default: detect & use all cores
+  min_cores: 1
+  step: 1
+  delay: 5  # seconds between check temperature & adjust step
